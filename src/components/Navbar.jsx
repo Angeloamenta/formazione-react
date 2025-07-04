@@ -8,6 +8,8 @@ const Navbar = () => {
         <Link className='hover:bg-purple-800 rounded-4xl p-1' to="/" >Home</Link>
         <Link className='hover:bg-purple-800 rounded-4xl p-1' to="/esercizio-1" >Esercizio 1</Link>
         <Link className='hover:bg-purple-800 rounded-4xl p-1' to="/esercizio-2" >Esercizio 2</Link>
+        <Link className='hover:bg-purple-800 rounded-4xl p-1' to="/esercizio-3" >Esercizio 3</Link>
+
 
 
         </div>
