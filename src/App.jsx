@@ -16,9 +16,9 @@ function App() {
   return (
     <BrowserRouter>
     <div>
-      <h1>Formazione react</h1>
-      <div>
         <Navbar/>
+      <div>
+      <h1 className='font-bold text-2xl mt-5 mb-5 text-center'>Formazione react</h1>
       </div>
       <Routes>
         <Route path='/' element={<Home/>}/>
