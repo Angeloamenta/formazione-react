@@ -3,10 +3,13 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
 //pages
 import Esercizio1 from './pages/Esercizio1'
+import Esercizio2 from './pages/Esercizio2'
+
 import Home from './pages/Home'
-import Navbar from './components/Navbar'
 
 //components
+import Navbar from './components/Navbar'
+import react from './assets/react.svg'
 
 
 
@@ -17,13 +20,15 @@ function App() {
     <BrowserRouter>
     <div>
         <Navbar/>
-      <div>
+      <div className='flex justify-center gap-3'>
       <h1 className='font-bold text-2xl mt-5 mb-5 text-center'>Formazione react</h1>
+      <img src={react} alt=""/>
       </div>
       <div className='container-personal'>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/esercizio-1' element={<Esercizio1/>}/>
+        <Route path='/esercizio-2' element={<Esercizio2/>}/>
       </Routes>
       </div>
     </div>

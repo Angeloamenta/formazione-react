@@ -1,8 +1,10 @@
 const WelcomeProps = (props) => {
 
-    const firstProps = props.firstProps;
+    // const firstProps = props.firstProps
+    
+    const [primo, secondo] = props.saluti
 
-    if (!firstProps) {
+    if (!primo || !secondo) {
         return (
             <>
                 <h2>Welcome</h2>
@@ -11,7 +13,9 @@ const WelcomeProps = (props) => {
     }
     return (
         <>
-            <h2>{props.firstProps}</h2>
+            <h2>{primo}</h2>
+            <h2>{secondo}</h2>
+
         </>
     )
 }

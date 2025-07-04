@@ -1,14 +1,19 @@
+import StampaEsercizio from "../components/StampaEsercizio"
+
 import WelcomeProps from "../components/WelcomeProps"
 
 
 const Esercizio1 = () => {
+
+    const saluti =["ciao react", "salve react"]
+
     return (
         <>
+        <StampaEsercizio numero="1"/>
         <div>
-            <h1>Esercizio 1</h1>
-        </div>
-        <div>
-            <WelcomeProps firstProps="hello!!!"/>
+            {/* <WelcomeProps firstProps="hello!!!"/> */}
+            <WelcomeProps saluti={saluti}/>
+
         </div>
         </>
     )
