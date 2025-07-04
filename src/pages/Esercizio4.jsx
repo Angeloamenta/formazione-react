@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import {  useState } from "react";
 import StampaEsercizio from "../components/StampaEsercizio"
 
 // Extra
@@ -22,9 +22,6 @@ const handleChangeNote = (e) => {
     setNote(e.target.value)    
 }
 
-const handleCheck = () => {
-    setCheck((prev) => !prev)
-}
 
 const addNote = () => {
     const newNote = {
@@ -32,11 +29,25 @@ const addNote = () => {
         title: title,
         note: note,
         check: check
-     }
-
+    }
+    
     setList([...list, newNote])    
 }
 
+const handleRemove = (id) => {
+    console.log(id);
+    
+  setList(list.filter(item => item.id !== id));
+}
+
+
+const handleCheckChange = (id) => {
+  setList(prevList =>
+    prevList.map(item =>
+      item.id === id ? { ...item, check: !item.check } : item
+    )
+  );
+};
     return (
         <>
         <StampaEsercizio numero="4"/>
@@ -57,11 +68,15 @@ const addNote = () => {
                                 <li className="w-100" key={element.id}> 
                                 <div className="flex justify-between">
                                     <h2 className="text-2xl mt-5 mb-1">{element.title}</h2>
-                                    <input type="checkbox"  checked={element.check}  onChange={handleCheck} id="" />
+                                    <input type="checkbox"  checked={element.check}  onChange={() =>handleCheckChange(element.id)} id="" />
                                 </div>
                                 <div>
                                     <p>{element.note}</p>
                                   
+                                </div>
+                                <div>
+                                    <button className="p-1 rounded-2xl bg-amber-800" onClick={() => handleRemove(element.id)}>Elimina</button>
+
                                 </div>
 
                                 </li>
