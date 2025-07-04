@@ -1,1 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
+
+
+:root {
+  --purple: #2d2b55d3;
+  --white: #ffff;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.container-personal {
+  width: 80%;
+  margin: 0 auto;
+}
